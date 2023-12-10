@@ -1,13 +1,5 @@
-/** @format */
-
 import React from "react";
-import dashbord from "../assets/img/dashboard.svg";
-import appointment from "../assets/img/appointment.svg";
-import labtest from "../assets/img/labtest.svg";
-import medicine from "../assets/img/medicine.svg";
-import messages from "../assets/img/message.svg";
-import payment from "../assets/img/payment.svg";
-import setting from "../assets/img/setting.svg";
+import { FaHome, FaFlask, FaCalendarAlt, FaMedkit, FaEnvelope, FaMoneyBill, FaCog } from "react-icons/fa";
 
 function Sidebar() {
   return (
@@ -34,45 +26,45 @@ function Sidebar() {
           <div className='collapse navbar-collapse' id='myNavbar'>
             <ul className='nav navbar-nav navbar-inxs '>
               <li>
-                <a href='#section2'>
-                  <img src={dashbord} alt='dashboard-icon' />
+                <a href='#section2 Dashboard'>
+                  <FaHome className='sidebar-icon' />
                   Dashboard
                 </a>
               </li>
               <li>
                 <a href='#section3'>
-                  <img src={labtest} alt='labtest-icon' />
+                  <FaFlask className='sidebar-icon' />
                   Lab Test
                 </a>
               </li>
               <li>
                 <a href='#section3'>
-                  <img src={appointment} alt='appointment-icon' />
+                  <FaCalendarAlt className='sidebar-icon' />
                   Appointment
                 </a>
               </li>
               <li>
                 <a href='#section3'>
-                  <img src={medicine} alt='medicine-icon' />
+                  <FaMedkit className='sidebar-icon' />
                   Medicine Order
                 </a>
               </li>
               <li>
                 <a href='#section3'>
-                  <img src={messages} alt='message-icon' />
+                  <FaEnvelope className='sidebar-icon' />
                   Message
                 </a>
               </li>
               <li>
                 <a href='#section3'>
-                  <img src={payment} alt='payment-icon' />
+                  <FaMoneyBill className='sidebar-icon' />
                   Payment
                 </a>
               </li>
               <li>
                 <a href='#section3'>
-                  <img src={setting} alt='setting-icon' />
-                  Settigs
+                  <FaCog className='sidebar-icon' />
+                  Settings
                 </a>
               </li>
             </ul>
@@ -85,44 +77,44 @@ function Sidebar() {
         <ul className='nav nav-pills nav-stacked '>
           <li>
             <a href='#section2'>
-              <img src={dashbord} alt='dashboard-icon' />
+              <FaHome className='sidebar-icon' />
               Dashboard
             </a>
           </li>
           <li>
             <a href='#section3'>
-              <img src={labtest} alt='labtest-icon' />
+              <FaFlask className='sidebar-icon' />
               Lab Test
             </a>
           </li>
           <li>
             <a href='#section3'>
-              <img src={appointment} alt='appointment-icon' />
+              <FaCalendarAlt className='sidebar-icon' />
               Appointment
             </a>
           </li>
           <li>
             <a href='#section3'>
-              <img src={medicine} alt='medicine-icon' />
+              <FaMedkit className='sidebar-icon' />
               Medicine Order
             </a>
           </li>
           <li>
             <a href='#section3'>
-              <img src={messages} alt='message-icon' />
+              <FaEnvelope className='sidebar-icon' />
               Message
             </a>
           </li>
           <li>
             <a href='#section3'>
-              <img src={payment} alt='payment-icon' />
+              <FaMoneyBill className='sidebar-icon' />
               Payment
             </a>
           </li>
           <li>
             <a href='#section3'>
-              <img src={setting} alt='setting-icon' />
-              Settigs
+              <FaCog className='sidebar-icon' />
+              Settings
             </a>
           </li>
         </ul>

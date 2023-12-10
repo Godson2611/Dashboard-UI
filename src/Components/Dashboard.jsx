@@ -32,7 +32,7 @@ function Dashboard({ data }) {
 
   return (
     <>
-      <div className='container-fluid  col-sm-10  Dashboard '>
+      <div className='container-fluid col-sm-10 Dashboard'>
         <div className='form-outline search-input'>
           <input
             type='search'
@@ -41,8 +41,8 @@ function Dashboard({ data }) {
             placeholder='  Search'
             aria-label='Search'
           />
-          <span>
-            <img src={notification} alt="notification-icon" />
+          <span className='notification-bg'>
+            <img src={notification} alt='notification-icon' />
           </span>
         </div>
 
@@ -64,48 +64,50 @@ function Dashboard({ data }) {
         </div>
 
         <div className='row table-container'>
-          <table className='table table-hover px-5 '>
-            <thead>
-              <tr>
-                <th scope='col'>
-                  <input
-                    className='form-check-input mt-0'
-                    type='checkbox'
-                    value=''
-                    aria-label='Checkbox for following text input'
-                  />
-                </th>
-                <th scope='col'>invoice ID</th>
-                <th scope='col'>Date</th>
-                <th scope='col'>Customer</th>
-                <th scope='col'>Payable Amount</th>
-                <th scope='col'>Paid Amount</th>
-                <th scope='col'>Due</th>
-              </tr>
-            </thead>
-            <tbody >
-              {data.map((e, i) => {
-                return (
-                  <tr key={i}>
-                    <th scope='row'>
-                      <input
-                        className='form-check-input mt-0'
-                        type='checkbox'
-                        value=''
-                        aria-label='Checkbox for following text input'
-                      />
-                    </th>
-                    <td className='text-primary'>{e.invoiceid}</td>
-                    <td>{e.date}</td>
-                    <td>{e.customer}</td>
-                    <td>{e.payableamount}</td>
-                    <td>{e.paidamount}</td>
-                    <td>{e.due}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          <div className='table-responsive'>
+            <table className='table table-hover px-5'>
+              <thead>
+                <tr>
+                  <th scope='col'>
+                    <input
+                      className='form-check-input mt-0'
+                      type='checkbox'
+                      value=''
+                      aria-label='Checkbox for following text input'
+                    />
+                  </th>
+                  <th scope='col'>invoice ID</th>
+                  <th scope='col'>Date</th>
+                  <th scope='col'>Customer</th>
+                  <th scope='col'>Payable Amount</th>
+                  <th scope='col'>Paid Amount</th>
+                  <th scope='col'>Due</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.map((e, i) => {
+                  return (
+                    <tr key={i}>
+                      <th scope='row'>
+                        <input
+                          className='form-check-input mt-0'
+                          type='checkbox'
+                          value=''
+                          aria-label='Checkbox for following text input'
+                        />
+                      </th>
+                      <td className='text-primary'>{e.invoiceid}</td>
+                      <td className='td-color'>{e.date}</td>
+                      <td className='td-color'>{e.customer}</td>
+                      <td className='td-color'>{e.payableamount}</td>
+                      <td className='td-color'>{e.paidamount}</td>
+                      <td className='td-color'>{e.due}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>

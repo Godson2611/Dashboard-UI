@@ -1,6 +1,11 @@
-/** @format */
-
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Poppins:ital,wght@0,500;1,400&display=swap");
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  scrollbar-width: none;
+}
 
 .row.content {
   height: 550px;
@@ -12,7 +17,7 @@
 }
 
 .logo {
-  color: #013cc6;
+  color: #013cc6 !important;
   font-family: Poppins !important;
   font-size: 24px !important;
   font-style: normal;
@@ -21,19 +26,12 @@
   margin-top: 55px !important;
 }
 
-@media screen and (max-width: 767px) {
-  .row.content {
-    height: auto;
-  }
-}
-
 .navbar-inverse {
-  background-color: #242424;
-  border-color: #e6e6e6;
+  background-color: #ffffff !important;
 }
 
-#myNavbar {
-  background-color: #f5f1f1 !important;
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #484646;
 }
 
 .nav {
@@ -68,12 +66,39 @@ input[type="search"] {
   width: 437px;
 }
 
-.nav li :hover {
-  color: #013cc6 !important;
+.nav li {
+  transition: color 0.3s ease;
+  position: relative;
 }
-.active:hover {
-  border-left: #013cc6 !important;
-  border: 1px solid #013cc6 !important ;
+
+.nav li.Dashboard:hover a {
+  color: #0B63F8 !important;
+  background-color: transparent;
+}
+
+.nav li:hover a {
+  color: #0B63F8 !important;
+  background-color: transparent;
+}
+
+.nav li:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 0px 3px 3px 0px !important;
+  width: 4px;
+  background-color: #0B63F8 !important;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav li:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .Total-Dashboard {
@@ -82,8 +107,8 @@ input[type="search"] {
 
 .Dashboard {
   background: #f8f8f8;
-  height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 .search-input-box {
@@ -97,6 +122,7 @@ input[type="search"] {
 
 .sales-information {
   margin-top: 24px !important;
+  margin-bottom: 40px;
 }
 .form-label {
   margin-bottom: 16px;
@@ -104,9 +130,7 @@ input[type="search"] {
 
 .table {
   background-color: #fff;
-  margin-top: 40px;
-  max-width: 100%;
-  width: 97%;
+  width: 100%;
   margin-left: 15px;
 }
 
@@ -129,4 +153,118 @@ h2,
 h3 {
   margin-top: 40px;
   margin-bottom: 10px;
+}
+
+.notification-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 52px;
+  width: 52px;
+}
+
+.notification-bg img {
+  width: 50%;
+  height: auto;
+}
+
+.text-primary {
+  color: #0b63f8;
+}
+
+.td-color {
+  opacity: 0.65;
+  color: #000000;
+}
+
+.table-container {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav li a {
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    font-size: 12px !important;
+  }
+  .search-input {
+    margin-top: 10px;
+  }
+  .search-input-box {
+    width: 100%;
+  }
+  .search-icons {
+    right: 0;
+  }
+  .navbar {
+    border: none !important;
+  }
+}
+
+
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .nav li a {
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    font-size: 14px !important;
+  }
+  .search-input {
+    margin-top: 56px;
+  }
+  .search-input-box {
+    width: 100%;
+  }
+  .search-icons {
+    right: 0;
+  }
+  .navbar {
+    border: none !important;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  .nav li a {
+    justify-content: center !important;
+    gap: 16px !important;
+    font-size: 16px !important;
+  }
+  .search-input {
+    margin-top: 56px;
+  }
+  .search-input-box {
+    width: 80%;
+  }
+  .search-icons {
+    right: -10px;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .nav li a {
+    justify-content: center !important;
+    gap: 16px !important;
+    font-size: 16px !important;
+  }
+  .search-input {
+    margin-top: 56px;
+  }
+  .search-input-box {
+    width: 437px;
+  }
+  .search-icons {
+    right: -21px;
+  }
 }
