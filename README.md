@@ -11,7 +11,7 @@ This project is a responsive dashboard UI for the Medico Sales application, deve
 ## Features
 
 - Responsive design for different screen sizes.
-- Navigation bar with icons for quick access to different sections.
+- Navigation bar with match icons.
 - Stylish and intuitive sidebar menu.
 - Hover effects on navigation items for a better user experience.
 - Customizable styles using CSS.
